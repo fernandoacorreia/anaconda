@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# Command-line interface to the Anaconda environment.
+#
+set -o nounset -o errexit -o pipefail
+
+docker run \
+  -i -t \
+  -v $(pwd):$(pwd) \
+  fernandoacorreia/anaconda \
+  /bin/bash
